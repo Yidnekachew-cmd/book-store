@@ -51,11 +51,9 @@ In this project of the book store application. I set up the environment and tool
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
     <li><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a></li>
     <li><a href="https://www.javascript.com/">JavaScript</a></li>
-    <li><a href="https://webpack.js.org/">Webpack</a></li>
-    <li><a href="https://www.notion.so/product?fredir=1">Notion for API's</a></li>
+    <li><a href="https://react.dev/">React</a></li>
   </ul>
 </details>
 
@@ -77,11 +75,9 @@ In this project of the book store application. I set up the environment and tool
 
 ### Key Features <a name="key-features"></a>
 
-- **[HTML]**
-- **[CSS]**
-- **[Javascript]** ---> with ES6
-- **[Webpack]**
-- **[API's(Notion)]**
+- **[Add books]**
+- **[Remove books]**
+- **[Fetch  data from the API]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
