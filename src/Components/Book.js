@@ -37,14 +37,6 @@ const Book = ({ books }) => (
 
     </ul>
     <hr className={styles.hr} />
-    <form action="" className={styles.form}>
-      <h2 className={styles.formTitle}>ADD NEW BOOK</h2>
-      <div className={styles.formInputs}>
-        <input type="text" name="title" id="bookTitle" className={styles.bookTitle} placeholder="Book title" />
-        <input type="text" name="author" id="bookAuthor" className={styles.bookAuthor} placeholder="Author" />
-        <button type="submit" className={styles.addBook}>ADD BOOK</button>
-      </div>
-    </form>
   </div>
 );
 

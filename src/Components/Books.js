@@ -1,3 +1,4 @@
+import Form from './Form';
 import Book from './Book';
 
 const Books = () => {
@@ -30,6 +31,7 @@ const Books = () => {
   return (
     <div>
       <Book books={books} />
+      <Form />
     </div>
   );
 };
