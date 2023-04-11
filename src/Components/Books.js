@@ -1,36 +1,22 @@
+import { useSelector } from 'react-redux';
+import styles from './modules/Books.module.css';
 import Form from './Form';
 import Book from './Book';
 
 const Books = () => {
-  const books = [
-    {
-      bookType: 'Action',
-      bookTitle: 'The Hunger Games',
-      bookAuthor: 'Suzanne Collins',
-      percentage: '64%',
-      CurrentChapter: 'Chapter 17',
-      id: '1',
-    },
-    {
-      bookType: 'Science Fiction',
-      bookTitle: 'Dune',
-      bookAuthor: 'Frank Herbert',
-      percentage: '8%',
-      CurrentChapter: 'Chapter 3: "A Lesson Learned"',
-      id: '2',
-    },
-    {
-      bookType: 'Economy',
-      bookTitle: 'Capital in the Twenty-First Century',
-      bookAuthor: 'Suzanne Collins',
-      percentage: '0%',
-      CurrentChapter: 'Introduction',
-      id: '3',
-    },
-  ];
+  const books = useSelector((state) => state.book);
   return (
     <div>
-      <Book books={books} />
+      <div className={styles.container}>
+        <ul className={styles.bookItems}>
+          {
+      books.map((book) => (
+        <Book key={book.item_id} book={book} />
+      ))
+      }
+        </ul>
+        <hr className={styles.hr} />
+      </div>
       <Form />
     </div>
   );
