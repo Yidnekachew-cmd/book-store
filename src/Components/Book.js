@@ -1,53 +1,50 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import styles from './modules/Book.module.css';
+import { removeBook } from '../redux/Books/booksSlice';
 
-const Book = ({ books }) => (
-  <div className={styles.container}>
-    <ul className={styles.bookItems}>
-      {
-      books.map((book) => (
-        <li key={book.id} className={styles.bookItem}>
-          <div className={styles.bookContent}>
-            <p className={styles.School}>{book.bookType}</p>
-            <h2 className={styles.Title}>{book.bookTitle}</h2>
-            <p className={styles.SuzanneCollins}>{book.bookAuthor}</p>
-            <ul className={styles.bookEditor}>
-              <li className={styles.Comments}>Comments</li>
-              <li>Remove</li>
-              <li>Edit</li>
-            </ul>
+const Book = ({ book }) => {
+  const dispatch = useDispatch();
+  return (
+    <li className={styles.bookItem}>
+      <div className={styles.bookContent}>
+        <p className={styles.School}>{book.category}</p>
+        <h2 className={styles.Title}>{book.title}</h2>
+        <p className={styles.SuzanneCollins}>{book.author}</p>
+        <ul className={styles.bookEditor}>
+          <li className={styles.Comments}>Comments</li>
+          <li>
+            <button type="button" onClick={() => dispatch(removeBook(book.item_id))}> Remove</button>
+          </li>
+          <li>Edit</li>
+        </ul>
+      </div>
+      <div className={styles.status}>
+        <div className={styles.bookStatus}>
+          <div className={styles.OvalPercentage} />
+          <div className={styles.PercentageWraper}>
+            <p className={styles.Percentage}>{book.percentage}</p>
+            <h3 className={styles.Completed}>Completed</h3>
           </div>
-          <div className={styles.status}>
-            <div className={styles.bookStatus}>
-              <div className={styles.OvalPercentage} />
-              <div className={styles.PercentageWraper}>
-                <p className={styles.Percentage}>{book.percentage}</p>
-                <h3 className={styles.Completed}>Completed</h3>
-              </div>
-            </div>
-            <div className={styles.bookUpdate}>
-              <p className={styles.Current}>CURRENT CHAPTER</p>
-              <h3 className={styles.Chapter}>{book.CurrentChapter}</h3>
-              <button className={styles.button} type="button">UPDATE PROGRESS</button>
-            </div>
-          </div>
-        </li>
-      ))
-      }
-
-    </ul>
-    <hr className={styles.hr} />
-  </div>
-);
+        </div>
+        <div className={styles.bookUpdate}>
+          <p className={styles.Current}>CURRENT CHAPTER</p>
+          <h3 className={styles.Chapter}>{book.CurrentChapter}</h3>
+          <button className={styles.button} type="button">UPDATE PROGRESS</button>
+        </div>
+      </div>
+    </li>
+  );
+};
 
 Book.propTypes = {
-  books: PropTypes.arrayOf(
+  book: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      item_id: PropTypes.number.isRequired,
       percentage: PropTypes.number.isRequired,
-      bookType: PropTypes.string.isRequired,
-      bookTitile: PropTypes.string.isRequired,
-      bookAuthor: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+      titile: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
       CurrentChapter: PropTypes.string.isRequired,
     }),
   ).isRequired,
