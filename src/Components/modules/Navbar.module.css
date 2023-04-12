@@ -47,7 +47,8 @@
   gap: 1.8rem;
 }
 
-.navItem1 {
+.navItem1,
+.navItem2 {
   text-decoration: none;
   color: #121212;
   font-family: 'Montserrat', sans-serif;
@@ -61,15 +62,6 @@
 
 .navItem2 {
   opacity: 0.5;
-  color: #121212;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.813rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.9px;
-  text-decoration: none;
 }
 
 .profile {

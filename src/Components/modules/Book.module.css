@@ -30,42 +30,48 @@
   height: 1.125rem;
   margin: 0 2.438rem 0 0;
   opacity: 0.5;
-  font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
+}
+
+.School,
+.Title,
+.SuzanneCollins,
+.bookEditor,
+.Completed {
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
   color: #121212;
+}
+
+.Title,
+.SuzanneCollins,
+.bookEditor {
+  font-family: 'Roboto Slab', sans-serif;
 }
 
 .Title {
   width: max-content;
   height: 1.813rem;
   margin: 0.188rem 20.188rem 0 0;
-  font-family: 'Roboto Slab', sans-serif;
   font-size: 1.375rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.2px;
-  color: #121212;
+}
+
+.SuzanneCollins,
+.bookEditor {
+  font-weight: 300;
+  color: #4386bf;
 }
 
 .SuzanneCollins {
   width: 6.688rem;
   height: 1.188rem;
   margin: 0.25rem 0 1rem 0;
-  font-family: 'Roboto Slab', sans-serif;
   font-size: 0.875rem;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #4386bf;
 }
 
 .bookEditor {
@@ -76,14 +82,7 @@
   width: 3.375rem;
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
-  font-family: 'Roboto Slab', sans-serif;
   font-size: 0.875rem;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #4386bf;
 }
 
 .status {
