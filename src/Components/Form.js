@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './modules/Form.module.css';
-import { addBook } from '../redux/Books/booksSlice';
+import { addBook, postBook } from '../redux/books/booksSlice';
 
 const Form = () => {
   const [title, setTitle] = useState('');
@@ -11,9 +11,20 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (title && author) dispatch(addBook({ item_id: uuidv4(), title, author }));
-    setTitle('');
-    setAuthor('');
+    if (title && author) {
+      const book = {
+        item_id: uuidv4(),
+        title,
+        author,
+        category: 'Fiction',
+      };
+      dispatch(postBook(book))
+        .then(() => {
+          dispatch(addBook(book));
+          setTitle('');
+          setAuthor('');
+        });
+    }
   };
   return (
     <div className={styles.container}>
