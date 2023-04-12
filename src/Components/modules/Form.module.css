@@ -35,12 +35,14 @@
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
-  color: #c4c4c4;
+  color: #000;
+  outline-color: #6a91b4;
 }
 
 .bookAuthor {
   width: 25%;
-  color: #c4c4c4;
+  color: #000;
+  outline-color: #6a91b4;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #fff;
@@ -60,4 +62,12 @@
   line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.addBook:hover {
+  background-color: #5ba4db;
+  color: #fff;
+  transition: 0.5s ease-in-out;
 }

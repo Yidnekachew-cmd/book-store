@@ -13,7 +13,8 @@ const Book = ({ book }) => {
         <p className={styles.SuzanneCollins}>{book.author}</p>
         <ul className={styles.bookEditor}>
           <li className={styles.Comments}>Comments</li>
-          <li>
+          <div className={styles.line} />
+          <li className={styles.remove}>
             <button
               type="button"
               onClick={
@@ -25,6 +26,7 @@ const Book = ({ book }) => {
               Remove
             </button>
           </li>
+          <div className={styles.line} />
           <li>Edit</li>
         </ul>
       </div>

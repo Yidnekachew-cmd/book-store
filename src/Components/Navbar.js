@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { FaRegUserCircle } from 'react-icons/fa';
 import styles from './modules/Navbar.module.css';
 
 const Navbar = () => (
@@ -14,6 +15,7 @@ const Navbar = () => (
         </li>
       </ul>
     </div>
+    <div className={styles.profile}><FaRegUserCircle className="fa-icon" /></div>
   </nav>
 );
 
