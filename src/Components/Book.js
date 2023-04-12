@@ -32,13 +32,13 @@ const Book = ({ book }) => {
         <div className={styles.bookStatus}>
           <div className={styles.OvalPercentage} />
           <div className={styles.PercentageWraper}>
-            <p className={styles.Percentage}>{book.percentage}</p>
+            <p className={styles.Percentage}>67%</p>
             <h3 className={styles.Completed}>Completed</h3>
           </div>
         </div>
         <div className={styles.bookUpdate}>
           <p className={styles.Current}>CURRENT CHAPTER</p>
-          <h3 className={styles.Chapter}>{book.CurrentChapter}</h3>
+          <h3 className={styles.Chapter}>Chapter 7</h3>
           <button className={styles.button} type="button">UPDATE PROGRESS</button>
         </div>
       </div>
