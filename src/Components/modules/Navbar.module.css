@@ -71,3 +71,17 @@
   letter-spacing: 1.9px;
   text-decoration: none;
 }
+
+.profile {
+  color: #0290ff;
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+
+.profile .fa-icon {
+  width: 2rem;
+  height: 2rem;
+}
