@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import styles from './modules/Book.module.css';
-import { removeBook } from '../redux/Books/booksSlice';
+import { removeBook, deleteBook } from '../redux/books/booksSlice';
 
 const Book = ({ book }) => {
   const dispatch = useDispatch();
@@ -14,7 +14,16 @@ const Book = ({ book }) => {
         <ul className={styles.bookEditor}>
           <li className={styles.Comments}>Comments</li>
           <li>
-            <button type="button" onClick={() => dispatch(removeBook(book.item_id))}> Remove</button>
+            <button
+              type="button"
+              onClick={
+          () => dispatch(deleteBook(book.item_id))
+            .then(() => dispatch(removeBook(book.item_id)))
+          }
+            >
+              {' '}
+              Remove
+            </button>
           </li>
           <li>Edit</li>
         </ul>
@@ -23,13 +32,13 @@ const Book = ({ book }) => {
         <div className={styles.bookStatus}>
           <div className={styles.OvalPercentage} />
           <div className={styles.PercentageWraper}>
-            <p className={styles.Percentage}>{book.percentage}</p>
+            <p className={styles.Percentage}>67%</p>
             <h3 className={styles.Completed}>Completed</h3>
           </div>
         </div>
         <div className={styles.bookUpdate}>
           <p className={styles.Current}>CURRENT CHAPTER</p>
-          <h3 className={styles.Chapter}>{book.CurrentChapter}</h3>
+          <h3 className={styles.Chapter}>Chapter 7</h3>
           <button className={styles.button} type="button">UPDATE PROGRESS</button>
         </div>
       </div>
